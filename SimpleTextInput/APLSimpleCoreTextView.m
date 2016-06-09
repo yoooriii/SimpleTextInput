@@ -2,7 +2,7 @@
 #import <QuartzCore/CALayer.h>
 
 #import "APLSimpleCaretView.h"
-
+#import "APLIndexedPosition.h"
 
 @interface APLSimpleCoreTextView ()
 
@@ -146,6 +146,9 @@ NSRange RangeIntersection(NSRange first, NSRange second);
 // Public method to find the text range index for a given CGPoint.
 - (NSInteger)closestIndexToPoint:(CGPoint)point
 {
+    if (0 == self.contentText.length) {
+        return 0;
+    }
 	/*
      Use Core Text to find the text index for a given CGPoint by iterating over the y-origin points for each line, finding the closest line, and finding the closest index within that line.
      */
@@ -167,22 +170,28 @@ NSRange RangeIntersection(NSRange first, NSRange second);
 }
 
 
+
+- (CGRect)caretRectForIndexedPosition:(APLIndexedPosition *)position
+{
+    return [self caretRectForIndex:position.index];
+}
+
 /*
  Public method to determine the CGRect for the insertion point or selection, used when creating or updating the simple caret view instance.
  */
-- (CGRect)caretRectForIndex:(int)index
+- (CGRect)caretRectForIndex:(NSInteger)index
 {
     // Special case, no text.
     if (self.contentText.length == 0) {
-        CGPoint origin = CGPointMake(CGRectGetMinX(self.bounds), CGRectGetMaxY(self.bounds) - self.font.leading);
+        const CGPoint origin = CGPointMake(CGRectGetMinX(self.bounds), CGRectGetMaxY(self.bounds) - self.font.leading);
 		// Note: using fabs() for typically negative descender from fonts.
-
-        return CGRectMake(origin.x, origin.y - fabs(self.font.descender), 3, self.font.ascender + fabs(self.font.descender));
+        const CGRect rect = CGRectMake(origin.x, origin.y - fabs(self.font.descender), 3, self.font.ascender + fabs(self.font.descender));
+        return rect;
     }
 
 	// Iterate over our CTLines, looking for the line that encompasses the given range.
     CFArrayRef lines = CTFrameGetLines(_ctFrame);
-    CFIndex linesCount = CFArrayGetCount(lines);
+    const CFIndex linesCount = CFArrayGetCount(lines);
 
 
     // Special case, insertion point at final position in text after newline.
@@ -271,11 +280,11 @@ NSRange RangeIntersection(NSRange first, NSRange second);
      If there is no selection range (always true for this sample), find the insert point rect and create a caretView to draw the caret at this position.
      */
     if (self.selectedTextRange.length == 0) {
-        self.caretView.frame = [self caretRectForIndex:self.selectedTextRange.location];
-        if (self.caretView.superview == nil) {
+        if (!self.caretView.superview) {
             [self addSubview:self.caretView];
             [self setNeedsDisplay];
         }
+        self.caretView.frame = [self caretRectForIndex:self.selectedTextRange.location];
         // Set up a timer to "blink" the caret.
         [self.caretView delayBlink];
     }

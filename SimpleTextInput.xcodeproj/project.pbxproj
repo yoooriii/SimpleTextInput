@@ -24,6 +24,16 @@
 		2806C51A1733392200AE3BDF /* APLIndexedPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2806C516173336EC00AE3BDF /* APLIndexedPosition.m */; };
 		2806C51D173346C800AE3BDF /* APLSimpleCaretView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2806C51C173346C800AE3BDF /* APLSimpleCaretView.m */; };
 		281E06FA1733682B00DA0F7D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281E06F91733682B00DA0F7D /* CoreText.framework */; };
+		E27F70111D0968BE00EF3BE4 /* MyTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E27F70101D0968BE00EF3BE4 /* MyTokenizer.m */; };
+		E292252E1D0986AA00DC95CF /* ExTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E292252D1D0986AA00DC95CF /* ExTextView.m */; };
+		E29225311D0986C800DC95CF /* ExTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = E29225301D0986C800DC95CF /* ExTextStorage.m */; };
+		E29225341D09870300DC95CF /* ExTextElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E29225331D09870300DC95CF /* ExTextElement.m */; };
+		E29225371D09A20E00DC95CF /* ZzStorageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E29225361D09A20E00DC95CF /* ZzStorageTest.m */; };
+		E292253E1D09A52300DC95CF /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E29225391D09A52300DC95CF /* 1.jpg */; };
+		E292253F1D09A52300DC95CF /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E292253A1D09A52300DC95CF /* 2.jpg */; };
+		E29225401D09A52300DC95CF /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E292253B1D09A52300DC95CF /* 3.jpg */; };
+		E29225411D09A52300DC95CF /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E292253C1D09A52300DC95CF /* 4.jpg */; };
+		E29225421D09A52300DC95CF /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E292253D1D09A52300DC95CF /* 5.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +64,21 @@
 		2806C51B173346C800AE3BDF /* APLSimpleCaretView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLSimpleCaretView.h; sourceTree = "<group>"; };
 		2806C51C173346C800AE3BDF /* APLSimpleCaretView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLSimpleCaretView.m; sourceTree = "<group>"; };
 		281E06F91733682B00DA0F7D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		2857B12817337C0E00295668 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = SOURCE_ROOT; };
+		E27F700F1D0968BE00EF3BE4 /* MyTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTokenizer.h; sourceTree = "<group>"; };
+		E27F70101D0968BE00EF3BE4 /* MyTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTokenizer.m; sourceTree = "<group>"; };
+		E292252C1D0986AA00DC95CF /* ExTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExTextView.h; sourceTree = "<group>"; };
+		E292252D1D0986AA00DC95CF /* ExTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExTextView.m; sourceTree = "<group>"; };
+		E292252F1D0986C800DC95CF /* ExTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExTextStorage.h; sourceTree = "<group>"; };
+		E29225301D0986C800DC95CF /* ExTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExTextStorage.m; sourceTree = "<group>"; };
+		E29225321D09870300DC95CF /* ExTextElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExTextElement.h; sourceTree = "<group>"; };
+		E29225331D09870300DC95CF /* ExTextElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExTextElement.m; sourceTree = "<group>"; };
+		E29225351D09A20E00DC95CF /* ZzStorageTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZzStorageTest.h; sourceTree = "<group>"; };
+		E29225361D09A20E00DC95CF /* ZzStorageTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZzStorageTest.m; sourceTree = "<group>"; };
+		E29225391D09A52300DC95CF /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		E292253A1D09A52300DC95CF /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		E292253B1D09A52300DC95CF /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		E292253C1D09A52300DC95CF /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		E292253D1D09A52300DC95CF /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +127,8 @@
 		2806C4F21733347C00AE3BDF /* SimpleTextInput */ = {
 			isa = PBXGroup;
 			children = (
-				2857B12817337C0E00295668 /* ReadMe.txt */,
+				E29225381D09A41100DC95CF /* Images */,
+				E292252B1D09864D00DC95CF /* MyCode */,
 				2806C5041733347C00AE3BDF /* MainStoryboard.storyboard */,
 				2806C50F173334D200AE3BDF /* APLSimpleCoreTextView.h */,
 				2806C510173334D200AE3BDF /* APLSimpleCoreTextView.m */,
@@ -120,6 +145,8 @@
 				2806C4FB1733347C00AE3BDF /* APLAppDelegate.h */,
 				2806C4FC1733347C00AE3BDF /* APLAppDelegate.m */,
 				2806C4F31733347C00AE3BDF /* Supporting Files */,
+				E27F700F1D0968BE00EF3BE4 /* MyTokenizer.h */,
+				E27F70101D0968BE00EF3BE4 /* MyTokenizer.m */,
 			);
 			path = SimpleTextInput;
 			sourceTree = "<group>";
@@ -136,6 +163,33 @@
 				2806C5021733347C00AE3BDF /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E292252B1D09864D00DC95CF /* MyCode */ = {
+			isa = PBXGroup;
+			children = (
+				E292252C1D0986AA00DC95CF /* ExTextView.h */,
+				E292252D1D0986AA00DC95CF /* ExTextView.m */,
+				E292252F1D0986C800DC95CF /* ExTextStorage.h */,
+				E29225301D0986C800DC95CF /* ExTextStorage.m */,
+				E29225321D09870300DC95CF /* ExTextElement.h */,
+				E29225331D09870300DC95CF /* ExTextElement.m */,
+				E29225351D09A20E00DC95CF /* ZzStorageTest.h */,
+				E29225361D09A20E00DC95CF /* ZzStorageTest.m */,
+			);
+			path = MyCode;
+			sourceTree = "<group>";
+		};
+		E29225381D09A41100DC95CF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E29225391D09A52300DC95CF /* 1.jpg */,
+				E292253A1D09A52300DC95CF /* 2.jpg */,
+				E292253B1D09A52300DC95CF /* 3.jpg */,
+				E292253C1D09A52300DC95CF /* 4.jpg */,
+				E292253D1D09A52300DC95CF /* 5.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +219,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = APL;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Apple Inc.";
 			};
 			buildConfigurationList = 2806C4E41733347C00AE3BDF /* Build configuration list for PBXProject "SimpleTextInput" */;
@@ -191,10 +245,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2806C5011733347C00AE3BDF /* Default@2x.png in Resources */,
+				E29225421D09A52300DC95CF /* 5.jpg in Resources */,
 				2806C5061733347C00AE3BDF /* MainStoryboard.storyboard in Resources */,
+				E292253F1D09A52300DC95CF /* 2.jpg in Resources */,
 				2806C5031733347C00AE3BDF /* Default-568h@2x.png in Resources */,
+				E292253E1D09A52300DC95CF /* 1.jpg in Resources */,
 				2806C4F71733347C00AE3BDF /* InfoPlist.strings in Resources */,
+				E29225411D09A52300DC95CF /* 4.jpg in Resources */,
 				2806C4FF1733347C00AE3BDF /* Default.png in Resources */,
+				E29225401D09A52300DC95CF /* 3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,12 +265,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2806C51D173346C800AE3BDF /* APLSimpleCaretView.m in Sources */,
+				E29225311D0986C800DC95CF /* ExTextStorage.m in Sources */,
 				2806C4FD1733347C00AE3BDF /* APLAppDelegate.m in Sources */,
+				E292252E1D0986AA00DC95CF /* ExTextView.m in Sources */,
 				2806C51A1733392200AE3BDF /* APLIndexedPosition.m in Sources */,
 				2806C5191733391F00AE3BDF /* APLIndexedRange.m in Sources */,
 				2806C5091733347C00AE3BDF /* APLViewController.m in Sources */,
 				2806C513173334D200AE3BDF /* APLSimpleCoreTextView.m in Sources */,
 				2806C4F91733347C00AE3BDF /* main.m in Sources */,
+				E27F70111D0968BE00EF3BE4 /* MyTokenizer.m in Sources */,
+				E29225341D09870300DC95CF /* ExTextElement.m in Sources */,
+				E29225371D09A20E00DC95CF /* ZzStorageTest.m in Sources */,
 				2806C514173334D200AE3BDF /* APLEditableCoreTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +320,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -268,7 +333,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -298,7 +363,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -311,6 +376,7 @@
 				GCC_PREFIX_HEADER = "SimpleTextInput/SimpleTextInput-Prefix.pch";
 				INFOPLIST_FILE = "SimpleTextInput/SimpleTextInput-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -323,6 +389,7 @@
 				GCC_PREFIX_HEADER = "SimpleTextInput/SimpleTextInput-Prefix.pch";
 				INFOPLIST_FILE = "SimpleTextInput/SimpleTextInput-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

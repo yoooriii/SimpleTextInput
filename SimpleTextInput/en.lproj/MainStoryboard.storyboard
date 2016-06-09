@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHR-Ck-Mwr" customClass="APLEditableCoreTextView">
-                                <rect key="frame" x="16" y="84" width="288" height="464"/>
+                                <rect key="frame" x="16" y="114" width="288" height="434"/>
                                 <color key="backgroundColor" red="1" green="0.96487997209999998" blue="0.073042467309999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="editableCoreTextViewDelegate" destination="vXZ-lx-hvc" id="p7h-t0-KId"/>
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MzH-8o-CO3" firstAttribute="top" secondItem="NHR-Ck-Mwr" secondAttribute="bottom" constant="20" id="IfR-31-yh8"/>
                             <constraint firstItem="NHR-Ck-Mwr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="WzE-El-Gkk"/>
@@ -34,7 +34,15 @@
                             <constraint firstItem="NHR-Ck-Mwr" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="gG1-sQ-D6r"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oxA-iw-5E5"/>
+                    <navigationItem key="navigationItem" title="qqqqq" prompt="aa" id="9qG-sQ-LBz">
+                        <barButtonItem key="backBarButtonItem" title="qqq" id="DJO-oq-ViJ"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="jIv-bk-GcI"/>
+                        <barButtonItem key="rightBarButtonItem" title="ExText" id="1rM-Pw-0RZ">
+                            <connections>
+                                <segue destination="2IT-5L-pMw" kind="push" id="0wx-d7-1nH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="editableCoreTextView" destination="NHR-Ck-Mwr" id="Zo2-Ko-PVk"/>
                     </connections>
@@ -42,6 +50,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="359" y="-289"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CDi-7N-RFv">
+            <objects>
+                <viewController id="2IT-5L-pMw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c11-xb-uif"/>
+                        <viewControllerLayoutGuide type="bottom" id="kga-es-mJd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bve-Gb-mfd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3X-Xm-XXl" customClass="ExTextView">
+                                <rect key="frame" x="20" y="82" width="280" height="296"/>
+                                <color key="backgroundColor" red="0.89198704769736847" green="1" blue="0.87483949611368406" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="296" id="Qwf-dt-Gyt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="o3X-Xm-XXl" secondAttribute="trailing" constant="20" id="0ew-1i-Db6"/>
+                            <constraint firstItem="o3X-Xm-XXl" firstAttribute="leading" secondItem="Bve-Gb-mfd" secondAttribute="leading" constant="20" id="8X5-Ix-eui"/>
+                            <constraint firstItem="o3X-Xm-XXl" firstAttribute="top" secondItem="c11-xb-uif" secondAttribute="bottom" constant="18" id="Q7y-IB-6RF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nuQ-Bh-OEU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VCH-rk-lZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="-289"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jV4-5H-aql">

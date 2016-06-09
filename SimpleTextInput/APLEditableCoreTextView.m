@@ -4,6 +4,7 @@
 #import "APLIndexedPosition.h"
 #import "APLIndexedRange.h"
 #import "APLSimpleCoreTextView.h"
+#import "MyTokenizer.h"
 
 
 // We use a tap gesture recognizer to allow the user to tap to invoke text edit mode.
@@ -30,6 +31,14 @@
 @synthesize markedTextStyle = _markedTextStyle;
 @synthesize inputDelegate = _inputDelegate;
 
+- (void)setInputDelegate:(id<UITextInputDelegate>)inputDelegate {
+    _inputDelegate = inputDelegate;
+}
+
+- (UITextInputStringTokenizer *)tokenizer {
+    return _tokenizer;
+}
+
 
 - (void)awakeFromNib
 {
@@ -39,7 +48,7 @@
     tapGestureRecognizer.delegate = self;
 
     // Create our tokenizer and text storage.
-    self.tokenizer = [[UITextInputStringTokenizer alloc] initWithTextInput:self];
+    _tokenizer = [[MyTokenizer alloc] initWithTextInput:self];
     self.text = [[NSMutableString alloc] init];
 
     self.userInteractionEnabled = YES;
@@ -100,7 +109,7 @@
         [self.inputDelegate selectionWillChange:self];
 
         // Find and update insertion point in underlying APLSimpleCoreTextView.
-        NSInteger index = [self.textView closestIndexToPoint:[tap locationInView:self.textView]];
+        const NSInteger index = [self.textView closestIndexToPoint:[tap locationInView:self.textView]];
         self.textView.markedTextRange = NSMakeRange(NSNotFound, 0);
         self.textView.selectedTextRange = NSMakeRange(index, 0);
 
@@ -146,7 +155,9 @@
 - (NSString *)textInRange:(UITextRange *)range
 {
     APLIndexedRange *r = (APLIndexedRange *)range;
-    return ([self.text substringWithRange:r.range]);
+    NSString* substring = [self.text substringWithRange:r.range];
+    NSLog(@"%@ -> '%@'", range, substring);
+    return substring;
 }
 
 
@@ -311,13 +322,13 @@
 {
 	// Generate IndexedPosition instance, and increment index by offset.
     APLIndexedPosition *indexedPosition = (APLIndexedPosition *)position;
-    NSInteger end = indexedPosition.index + offset;
+    const NSInteger resultIndex = indexedPosition.index + offset;
 	// Verify position is valid in document.
-    if (end > self.text.length || end < 0) {
+    if (resultIndex > self.text.length || resultIndex < 0) {
         return nil;
     }
 
-    return [APLIndexedPosition positionWithIndex:end];
+    return [APLIndexedPosition positionWithIndex:resultIndex];
 }
 
 
@@ -364,17 +375,19 @@
  */
 - (NSComparisonResult)comparePosition:(UITextPosition *)position toPosition:(UITextPosition *)other
 {
-    APLIndexedPosition *indexedPosition = (APLIndexedPosition *)position;
-    APLIndexedPosition *otherIndexedPosition = (APLIndexedPosition *)other;
+    return [(APLIndexedPosition*)position compareToPosition:(APLIndexedPosition*)other];
 
-	// For this sample, simply compare position index values.
-    if (indexedPosition.index < otherIndexedPosition.index) {
-        return NSOrderedAscending;
-    }
-    if (indexedPosition.index > otherIndexedPosition.index) {
-        return NSOrderedDescending;
-    }
-    return NSOrderedSame;
+//    APLIndexedPosition *indexedPosition = (APLIndexedPosition *)position;
+//    APLIndexedPosition *otherIndexedPosition = (APLIndexedPosition *)other;
+//
+//	// For this sample, simply compare position index values.
+//    if (indexedPosition.index < otherIndexedPosition.index) {
+//        return NSOrderedAscending;
+//    }
+//    if (indexedPosition.index > otherIndexedPosition.index) {
+//        return NSOrderedDescending;
+//    }
+//    return NSOrderedSame;
 }
 
 
@@ -492,10 +505,8 @@
  */
 - (CGRect)caretRectForPosition:(UITextPosition *)position
 {
-    APLIndexedPosition *pos = (APLIndexedPosition *)position;
-
 	// Get caret rect from underlying APLSimpleCoreTextView.
-    CGRect rect =  [self.textView caretRectForIndex:pos.index];
+    CGRect rect =  [self.textView caretRectForIndexedPosition:(APLIndexedPosition *)position];
 	// Convert rect to our view coordinates.
     return [self convertRect:rect fromView:self.textView];
 }

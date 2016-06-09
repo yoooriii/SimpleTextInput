@@ -2,9 +2,11 @@
 
 @interface APLIndexedPosition : UITextPosition
 
-@property (nonatomic) NSUInteger index;
+@property (nonatomic) NSInteger index;
 @property (nonatomic) id <UITextInputDelegate> inputDelegate;
 
-+ (instancetype)positionWithIndex:(NSUInteger)index;
++ (instancetype)positionWithIndex:(NSInteger)index;
+
+- (NSComparisonResult)compareToPosition:(APLIndexedPosition*)other;
 
 @end

@@ -21,6 +21,8 @@
     self.navigationItem.rightBarButtonItem = nil;
 }
 
+#pragma mark - APLEditableCoreTextViewDelegate
+
 /*
  Protocol method called after APLEditableCoreTextView has determined that user has invoked "edit" mode (via touching inside APLEditableCoreTextView). For this sample we provide a "Done" button at this point that the user can use to finish text editing mode.
  */

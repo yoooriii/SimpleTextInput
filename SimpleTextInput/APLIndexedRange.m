@@ -31,9 +31,13 @@
 
 
 // UITextRange read-only property - returns YES if range is zero length.
--(BOOL)isEmpty
+- (BOOL)isEmpty
 {
     return (self.range.length == 0);
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"%@ [%ld:%ld]", [super description], (long)self.range.location, (long)self.range.length];
 }
 
 @end
