@@ -47,3 +47,5 @@ The application delegate, adds the main view to the window and displays the wind
 
 Copyright (C) 2010-13 Apple Inc. All rights reserved.
 
+//USEFUL links:
+https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/LowerLevelText-HandlingTechnologies/LowerLevelText-HandlingTechnologies.html
